@@ -18,12 +18,24 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+        serif: ["Playfair Display", "serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        charcoal: "#1E1E1E",
+        "matte-gray": {
+          DEFAULT: "#2A2A2A",
+          dark: "#3C3C3C",
+        },
+        "alphaville-green": "#7CB342",
+        "off-white": "#F7F7F5",
+        "subtle-gold": "#C2A46B",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
