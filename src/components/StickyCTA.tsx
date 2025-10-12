@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { WHATSAPP_LINK } from "@/lib/constants";
 import { Phone } from "lucide-react";
+import { memo } from "react";
 
-export const StickyCTA = () => {
+export const StickyCTA = memo(() => {
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-matte-gray/90 backdrop-blur-sm p-3 z-40 md:hidden border-t border-matte-gray-dark">
       <Button asChild className="w-full bg-alphaville-green hover:bg-alphaville-green/90 text-charcoal font-semibold rounded-lg py-6 text-base">
@@ -13,4 +14,4 @@ export const StickyCTA = () => {
       </Button>
     </div>
   );
-};
+});

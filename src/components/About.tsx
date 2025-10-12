@@ -1,4 +1,5 @@
 import { Square, Trees, ShieldCheck, PenTool, Building } from "lucide-react";
+import { memo } from "react";
 
 const features = [
   { icon: Square, text: "Lotes a partir de 360 m²" },
@@ -8,7 +9,7 @@ const features = [
   { icon: Building, text: "Clube de lazer completo" },
 ];
 
-export const About = () => {
+export const About = memo(() => {
   return (
     <section id="sobre" className="py-20 bg-off-white text-charcoal">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -28,4 +29,4 @@ export const About = () => {
       </div>
     </section>
   );
-};
+});

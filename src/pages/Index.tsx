@@ -1,10 +1,13 @@
+import { Suspense, lazy } from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { About } from "@/components/About";
-import { Leisure } from "@/components/Leisure";
-import { ContactForm } from "@/components/ContactForm";
-import { Footer } from "@/components/Footer";
 import { StickyCTA } from "@/components/StickyCTA";
+
+// Lazy load components that are below the fold to improve initial page load time.
+const About = lazy(() => import("@/components/About").then(module => ({ default: module.About })));
+const Leisure = lazy(() => import("@/components/Leisure").then(module => ({ default: module.Leisure })));
+const ContactForm = lazy(() => import("@/components/ContactForm").then(module => ({ default: module.ContactForm })));
+const Footer = lazy(() => import("@/components/Footer").then(module => ({ default: module.Footer })));
 
 const Index = () => {
   return (
@@ -12,12 +15,15 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <About />
-        <Leisure />
-        {/* Placeholder sections can be added here */}
-        <ContactForm />
+        <Suspense fallback={<div className="w-full h-screen bg-charcoal" />}>
+          <About />
+          <Leisure />
+          <ContactForm />
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
       <StickyCTA />
     </div>
   );

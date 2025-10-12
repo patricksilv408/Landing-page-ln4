@@ -1,10 +1,11 @@
 import { WHATSAPP_LINK } from "@/lib/constants";
+import { memo } from "react";
 
-export const Footer = () => {
+export const Footer = memo(() => {
   return (
     <footer className="bg-matte-gray-dark text-off-white/70 py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
-        <img src="/images/logo-white.png" alt="Alphaville Litoral Norte 4" className="h-12 mx-auto mb-6" />
+        <img src="/images/logo-white.png" alt="Alphaville Litoral Norte 4" className="h-12 mx-auto mb-6" loading="lazy" decoding="async" />
         <div className="mb-4">
           <p className="font-semibold text-off-white">Derlon Alves — CRECI 25.820</p>
           <p>Imobiliária Imóvel Fácil</p>
@@ -20,4 +21,4 @@ export const Footer = () => {
       </div>
     </footer>
   );
-};
+});

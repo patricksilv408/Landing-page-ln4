@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { WHATSAPP_LINK } from "@/lib/constants";
+import { memo } from "react";
 
-export const Hero = () => {
+export const Hero = memo(() => {
   return (
     <section className="relative h-screen min-h-[700px] flex items-center justify-center text-center text-white">
       <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
@@ -34,4 +35,4 @@ export const Hero = () => {
       </div>
     </section>
   );
-};
+});

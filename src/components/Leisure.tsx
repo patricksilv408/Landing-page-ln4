@@ -44,7 +44,7 @@ const slides = [
   },
 ];
 
-export function Leisure() {
+export const Leisure = React.memo(() => {
   const plugin = React.useRef(
     Autoplay({ delay: 4500, stopOnInteraction: true })
   );
@@ -66,7 +66,13 @@ export function Leisure() {
                 <div className="p-1">
                   <Card className="border-none rounded-lg overflow-hidden relative aspect-video">
                     <CardContent className="flex items-center justify-center p-0 h-full">
-                      <img src={slide.img} alt={slide.title} className="w-full h-full object-cover" />
+                      <img 
+                        src={slide.img} 
+                        alt={slide.title} 
+                        className="w-full h-full object-cover"
+                        loading={index === 0 ? "eager" : "lazy"}
+                        decoding="async"
+                      />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                       <div className="absolute bottom-0 left-0 p-8 text-white">
                         <h3 className="text-2xl font-semibold font-serif">{slide.title}</h3>
@@ -91,4 +97,4 @@ export function Leisure() {
       </div>
     </section>
   );
-}
+});

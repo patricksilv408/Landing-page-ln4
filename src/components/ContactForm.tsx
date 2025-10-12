@@ -2,8 +2,9 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Checkbox } from "./ui/checkbox";
 import { Label } from "./ui/label";
+import { memo } from "react";
 
-export const ContactForm = () => {
+export const ContactForm = memo(() => {
   return (
     <section id="contato" className="py-20 bg-off-white text-charcoal">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl text-center">
@@ -38,4 +39,4 @@ export const ContactForm = () => {
       </div>
     </section>
   );
-};
+});
