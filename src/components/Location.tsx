@@ -20,7 +20,7 @@ export const Location = memo(() => {
         <div className="space-y-8">
           <div className="rounded-lg overflow-hidden border border-subtle-gold/30 shadow-lg">
             <img
-              src="/images/location-map.jpg"
+              src="/images/location-map.webp"
               alt="Mapa ilustrado do Alphaville Litoral Norte 4 e entorno."
               className="w-full h-auto object-cover"
               loading="lazy"
