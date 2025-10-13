@@ -4,12 +4,23 @@ import { memo } from "react";
 
 export const Hero = memo(() => {
   return (
-    <section className="relative h-screen min-h-[700px] flex items-center justify-center text-center text-white">
+    <section className="relative h-screen min-h-[700px] flex items-center justify-center text-center text-white overflow-hidden">
+      {/* Hero Image with fetchpriority */}
+      <img
+        src="/images/hero-entrance.webp"
+        alt="Portaria do Alphaville Litoral Norte 4"
+        className="absolute inset-0 w-full h-full object-cover"
+        fetchPriority="high"
+        loading="eager"
+        decoding="async"
+        width="1920"
+        height="1080"
+      />
+      
+      {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/hero-entrance.webp')" }}
-      ></div>
+      
+      {/* Content */}
       <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         <span className="absolute top-20 right-8 text-sm bg-subtle-gold/20 text-subtle-gold border border-subtle-gold rounded-full px-4 py-1 hidden md:block">
           Lançamento exclusivo — unidades limitadas

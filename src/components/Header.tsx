@@ -24,7 +24,15 @@ export const Header = memo(() => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <a href="#" className="flex-shrink-0">
-            <img className="h-10 w-auto" src="/images/logo-white.webp" alt="Alphaville Litoral Norte 4" loading="lazy" decoding="async" />
+            <img 
+              className="h-10 w-auto" 
+              src="/images/logo-white.webp" 
+              alt="Alphaville Litoral Norte 4" 
+              loading="eager" 
+              decoding="async"
+              width="120"
+              height="40"
+            />
           </a>
           <nav className="hidden md:flex items-center space-x-8">
             {NAV_LINKS.map((link) => (
@@ -45,7 +53,12 @@ export const Header = memo(() => {
             </Button>
           </div>
           <div className="md:hidden">
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-off-white">
+            <button 
+              onClick={() => setIsMenuOpen(!isMenuOpen)} 
+              className="text-off-white"
+              aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
+              aria-expanded={isMenuOpen}
+            >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>

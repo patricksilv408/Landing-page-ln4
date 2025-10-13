@@ -1,12 +1,14 @@
-import { memo } from "react";
+import { memo, useState } from "react";
 import { Button } from "./ui/button";
 import { WHATSAPP_LINK } from "@/lib/constants";
-import { MapPin, Send } from "lucide-react";
+import { MapPin, Send, Play } from "lucide-react";
 
 const GOOGLE_MAPS_LINK = "https://maps.google.com/?q=-12.821301247381363,-38.285187344408456";
 const GOOGLE_MAPS_DIRECTIONS_LINK = "https://www.google.com/maps/dir/?api=1&destination=-12.821301247381363,-38.285187344408456";
 
 export const Location = memo(() => {
+  const [mapLoaded, setMapLoaded] = useState(false);
+
   return (
     <section id="localizacao" className="py-20 bg-off-white text-charcoal">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
@@ -25,18 +27,31 @@ export const Location = memo(() => {
               className="w-full h-auto object-cover"
               loading="lazy"
               decoding="async"
+              width="1200"
+              height="800"
             />
           </div>
 
-          <div className="rounded-lg overflow-hidden border border-subtle-gold/30 shadow-lg aspect-video">
-            <iframe
-              src="https://maps.google.com/maps?q=-12.821301247381363,-38.285187344408456&z=15&output=embed"
-              className="w-full h-full border-0"
-              allowFullScreen={true}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Localização Alphaville Litoral Norte 4 no Google Maps"
-            ></iframe>
+          <div className="rounded-lg overflow-hidden border border-subtle-gold/30 shadow-lg aspect-video relative">
+            {!mapLoaded ? (
+              <div 
+                className="w-full h-full bg-matte-gray/10 flex flex-col items-center justify-center cursor-pointer hover:bg-matte-gray/20 transition-colors"
+                onClick={() => setMapLoaded(true)}
+              >
+                <Play className="w-16 h-16 text-alphaville-green mb-4" />
+                <p className="text-lg font-medium text-charcoal">Clique para carregar o mapa interativo</p>
+                <p className="text-sm text-charcoal/60 mt-2">Google Maps</p>
+              </div>
+            ) : (
+              <iframe
+                src="https://maps.google.com/maps?q=-12.821301247381363,-38.285187344408456&z=15&output=embed"
+                className="w-full h-full border-0"
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localização Alphaville Litoral Norte 4 no Google Maps"
+              ></iframe>
+            )}
           </div>
         </div>
 

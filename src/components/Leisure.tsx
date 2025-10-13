@@ -64,7 +64,7 @@ export const Leisure = React.memo(() => {
             {slides.map((slide, index) => (
               <CarouselItem key={index}>
                 <div className="p-1">
-                  <Card className="border-none rounded-lg overflow-hidden relative aspect-video">
+                  <Card className="border-none rounded-lg overflow-hidden relative" style={{ aspectRatio: '16/9' }}>
                     <CardContent className="flex items-center justify-center p-0 h-full">
                       <img 
                         src={slide.img} 
@@ -72,6 +72,9 @@ export const Leisure = React.memo(() => {
                         className="w-full h-full object-cover"
                         loading={index === 0 ? "eager" : "lazy"}
                         decoding="async"
+                        width="1600"
+                        height="900"
+                        style={{ contentVisibility: index > 1 ? 'auto' : 'visible' }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                       <div className="absolute bottom-0 left-0 p-8 text-white">
