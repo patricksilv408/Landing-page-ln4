@@ -8,7 +8,7 @@ export const Hero = memo(() => {
       <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/entrance.jpg')" }}
+        style={{ backgroundImage: "url('/images/hero-entrance.webp')" }}
       ></div>
       <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         <span className="absolute top-20 right-8 text-sm bg-subtle-gold/20 text-subtle-gold border border-subtle-gold rounded-full px-4 py-1 hidden md:block">
