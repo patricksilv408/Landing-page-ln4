@@ -59,16 +59,6 @@ export const Location = memo(() => {
         </div>
 
         <div className="mt-12 flex flex-col md:flex-row justify-end gap-4">
-          <Button asChild variant="outline" size="lg" className="border-subtle-gold text-subtle-gold hover:bg-subtle-gold hover:text-charcoal rounded-lg text-base gap-2">
-            <a href={GOOGLE_MAPS_LINK} target="_blank" rel="noopener noreferrer">
-              <MapPin size={18} /> Abrir no Google Maps
-            </a>
-          </Button>
-          <Button asChild variant="outline" size="lg" className="border-subtle-gold text-subtle-gold hover:bg-subtle-gold hover:text-charcoal rounded-lg text-base gap-2">
-            <a href={GOOGLE_MAPS_DIRECTIONS_LINK} target="_blank" rel="noopener noreferrer">
-              <Send size={18} /> Traçar rota
-            </a>
-          </Button>
           <Button asChild size="lg" className="bg-alphaville-green hover:bg-alphaville-green/90 text-charcoal font-semibold rounded-lg text-base">
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
               Falar com Derlon
