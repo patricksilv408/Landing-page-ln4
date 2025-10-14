@@ -22,7 +22,6 @@ export const Location = memo(() => {
         <div className="space-y-8">
           <div className="rounded-lg overflow-hidden border border-subtle-gold/30 shadow-lg">
             <picture>
-              <source srcSet="/images/location-map.avif" type="image/avif" />
               <source srcSet="/images/location-map.webp" type="image/webp" />
               <img
                 src="/images/location-map.webp"
