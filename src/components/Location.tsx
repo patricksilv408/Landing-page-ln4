@@ -1,10 +1,7 @@
 import { memo, useState } from "react";
 import { Button } from "./ui/button";
 import { WHATSAPP_LINK } from "@/lib/constants";
-import { MapPin, Send, Play } from "lucide-react";
-
-const GOOGLE_MAPS_LINK = "https://maps.google.com/?q=-12.821301247381363,-38.285187344408456";
-const GOOGLE_MAPS_DIRECTIONS_LINK = "https://www.google.com/maps/dir/?api=1&destination=-12.821301247381363,-38.285187344408456";
+import { Play } from "lucide-react";
 
 export const Location = memo(() => {
   const [mapLoaded, setMapLoaded] = useState(false);
@@ -65,6 +62,9 @@ export const Location = memo(() => {
             </a>
           </Button>
         </div>
+        <p className="text-xs text-charcoal/70 text-center md:text-right mt-2">
+          Ao prosseguir, autorizo contato por WhatsApp, telefone e e-mail sobre o Alphaville Litoral Norte 4. Consulte a nossa <a href="/politica-de-privacidade" target="_blank" rel="noopener noreferrer" className="underline hover:text-charcoal">Política de Privacidade</a>.
+        </p>
       </div>
     </section>
   );

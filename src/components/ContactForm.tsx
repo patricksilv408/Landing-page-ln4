@@ -36,7 +36,7 @@ export const ContactForm = memo(() => {
             Quero receber agora
           </Button>
           <p className="text-xs text-center text-muted-foreground pt-2">
-            Ao prosseguir, você concorda com a nossa <a href="/politica-de-privacidade" target="_blank" rel="noopener noreferrer" className="underline hover:text-charcoal">Política de Privacidade</a>.
+            Ao prosseguir, autorizo contato por WhatsApp, telefone e e-mail sobre o Alphaville Litoral Norte 4. Consulte a nossa <a href="/politica-de-privacidade" target="_blank" rel="noopener noreferrer" className="underline hover:text-charcoal">Política de Privacidade</a>.
           </p>
         </form>
       </div>

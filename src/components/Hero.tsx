@@ -43,6 +43,9 @@ export const Hero = memo(() => {
             </a>
           </Button>
         </div>
+        <p className="text-xs text-white/80 mt-4 max-w-md text-center">
+          Ao prosseguir, autorizo contato por WhatsApp, telefone e e-mail sobre o Alphaville Litoral Norte 4. Consulte a nossa <a href="/politica-de-privacidade" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Política de Privacidade</a>.
+        </p>
       </div>
     </section>
   );

@@ -90,12 +90,15 @@ export const Leisure = React.memo(() => {
           <CarouselPrevious className="left-4 text-white bg-black/30 hover:bg-black/50 border-white/50" />
           <CarouselNext className="right-4 text-white bg-black/30 hover:bg-black/50 border-white/50" />
         </Carousel>
-        <div className="absolute bottom-12 right-12 z-20 hidden md:block">
+        <div className="absolute bottom-12 right-12 z-20 hidden md:block text-right">
              <Button asChild size="lg" className="bg-alphaville-green hover:bg-alphaville-green/90 text-charcoal font-semibold rounded-lg px-8 py-6 text-base">
                 <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                     Falar com Derlon
                 </a>
             </Button>
+            <p className="text-xs text-white/80 mt-2 max-w-xs ml-auto">
+              Ao prosseguir, autorizo contato por WhatsApp, telefone e e-mail sobre o Alphaville Litoral Norte 4. Consulte a nossa <a href="/politica-de-privacidade" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Política de Privacidade</a>.
+            </p>
         </div>
       </div>
     </section>
