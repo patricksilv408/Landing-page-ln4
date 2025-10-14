@@ -21,15 +21,19 @@ export const Location = memo(() => {
 
         <div className="space-y-8">
           <div className="rounded-lg overflow-hidden border border-subtle-gold/30 shadow-lg">
-            <img
-              src="/images/location-map.webp"
-              alt="Mapa ilustrado do Alphaville Litoral Norte 4 e entorno."
-              className="w-full h-auto object-cover"
-              loading="lazy"
-              decoding="async"
-              width="1200"
-              height="800"
-            />
+            <picture>
+              <source srcSet="/images/location-map.avif" type="image/avif" />
+              <source srcSet="/images/location-map.webp" type="image/webp" />
+              <img
+                src="/images/location-map.webp"
+                alt="Mapa ilustrado do Alphaville Litoral Norte 4 e entorno."
+                className="w-full h-auto object-cover"
+                loading="lazy"
+                decoding="async"
+                width="1200"
+                height="800"
+              />
+            </picture>
           </div>
 
           <div className="rounded-lg overflow-hidden border border-subtle-gold/30 shadow-lg aspect-video relative">

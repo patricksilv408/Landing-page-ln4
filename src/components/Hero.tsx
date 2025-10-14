@@ -5,17 +5,21 @@ import { memo } from "react";
 export const Hero = memo(() => {
   return (
     <section className="relative h-screen min-h-[700px] flex items-center justify-center text-center text-white overflow-hidden">
-      {/* Hero Image with fetchpriority */}
-      <img
-        src="/images/hero-entrance.webp"
-        alt="Portaria do Alphaville Litoral Norte 4"
-        className="absolute inset-0 w-full h-full object-cover"
-        fetchPriority="high"
-        loading="eager"
-        decoding="async"
-        width="1920"
-        height="1080"
-      />
+      {/* Hero Image with AVIF and WebP fallback */}
+      <picture>
+        <source srcSet="/images/hero-entrance.avif" type="image/avif" />
+        <source srcSet="/images/hero-entrance.webp" type="image/webp" />
+        <img
+          src="/images/hero-entrance.webp"
+          alt="Portaria do Alphaville Litoral Norte 4"
+          className="absolute inset-0 w-full h-full object-cover"
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
+          width="1920"
+          height="1080"
+        />
+      </picture>
       
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black opacity-50 z-10"></div>

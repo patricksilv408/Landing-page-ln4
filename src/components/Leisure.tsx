@@ -13,32 +13,38 @@ import { WHATSAPP_LINK } from "@/lib/constants";
 
 const slides = [
   {
-    img: "/images/leisure-pool.webp",
+    imgAvif: "/images/leisure-pool.avif",
+    imgWebp: "/images/leisure-pool.webp",
     title: "Piscinas adulto e infantil",
     desc: "Lazer com vista e conforto o ano inteiro.",
   },
   {
-    img: "/images/leisure-aerial.webp",
+    imgAvif: "/images/leisure-aerial.avif",
+    imgWebp: "/images/leisure-aerial.webp",
     title: "Vista Aérea do Empreendimento",
     desc: "Uma visão completa do paraíso que espera por você.",
   },
   {
-    img: "/images/leisure-gym.webp",
+    imgAvif: "/images/leisure-gym.avif",
+    imgWebp: "/images/leisure-gym.webp",
     title: "Academia climatizada",
     desc: "Equipamentos completos para treinos eficientes.",
   },
   {
-    img: "/images/leisure-beach-tennis.webp",
+    imgAvif: "/images/leisure-beach-tennis.avif",
+    imgWebp: "/images/leisure-beach-tennis.webp",
     title: "Beach Tennis",
     desc: "Quadra em areia para esporte e diversão.",
   },
   {
-    img: "/images/leisure-plaza.webp",
+    imgAvif: "/images/leisure-plaza.avif",
+    imgWebp: "/images/leisure-plaza.webp",
     title: "Praças",
     desc: "Paisagismo autoral e áreas de estar ao ar livre.",
   },
   {
-    img: "/images/leisure-entrance.webp",
+    imgAvif: "/images/leisure-entrance.avif",
+    imgWebp: "/images/leisure-entrance.webp",
     title: "Portaria",
     desc: "Arquitetura marcante e controle de acesso 24h.",
   },
@@ -66,16 +72,20 @@ export const Leisure = React.memo(() => {
                 <div className="p-1">
                   <Card className="border-none rounded-lg overflow-hidden relative" style={{ aspectRatio: '16/9' }}>
                     <CardContent className="flex items-center justify-center p-0 h-full">
-                      <img 
-                        src={slide.img} 
-                        alt={slide.title} 
-                        className="w-full h-full object-cover"
-                        loading={index === 0 ? "eager" : "lazy"}
-                        decoding="async"
-                        width="1600"
-                        height="900"
-                        style={{ contentVisibility: index > 1 ? 'auto' : 'visible' }}
-                      />
+                      <picture>
+                        <source srcSet={slide.imgAvif} type="image/avif" />
+                        <source srcSet={slide.imgWebp} type="image/webp" />
+                        <img 
+                          src={slide.imgWebp} 
+                          alt={slide.title} 
+                          className="w-full h-full object-cover"
+                          loading={index === 0 ? "eager" : "lazy"}
+                          decoding="async"
+                          width="1600"
+                          height="900"
+                          style={{ contentVisibility: index > 1 ? 'auto' : 'visible' }}
+                        />
+                      </picture>
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                       <div className="absolute bottom-0 left-0 p-8 text-white">
                         <h3 className="text-2xl font-semibold font-serif">{slide.title}</h3>
