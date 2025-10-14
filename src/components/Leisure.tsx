@@ -14,32 +14,32 @@ import { WHATSAPP_LINK } from "@/lib/constants";
 
 const slides = [
   {
-    img: "/images/leisure-pool.avif",
+    img: "/images/leisure-pool.webp",
     title: "Piscinas adulto e infantil",
     desc: "Lazer com vista e conforto o ano inteiro.",
   },
   {
-    img: "/images/leisure-aerial.avif",
+    img: "/images/leisure-aerial.webp",
     title: "Vista Aérea do Empreendimento",
     desc: "Uma visão completa do paraíso que espera por você.",
   },
   {
-    img: "/images/leisure-gym.avif",
+    img: "/images/leisure-gym.webp",
     title: "Academia climatizada",
     desc: "Equipamentos completos para treinos eficientes.",
   },
   {
-    img: "/images/leisure-beach-tennis.avif",
+    img: "/images/leisure-beach-tennis.webp",
     title: "Beach Tennis",
     desc: "Quadra em areia para esporte e diversão.",
   },
   {
-    img: "/images/leisure-plaza.avif",
+    img: "/images/leisure-plaza.webp",
     title: "Praças",
     desc: "Paisagismo autoral e áreas de estar ao ar livre.",
   },
   {
-    img: "/images/leisure-entrance.avif",
+    img: "/images/leisure-entrance.webp",
     title: "Portaria",
     desc: "Arquitetura marcante e controle de acesso 24h.",
   },
