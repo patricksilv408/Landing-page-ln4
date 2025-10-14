@@ -27,7 +27,10 @@ export const Footer = memo(() => {
             Este é um site independente do corretor autorizado para divulgação do Alphaville Litoral Norte 4 e não é o site oficial da Alphaville Urbanismo.
           </p>
           <p>
-            © {new Date().getFullYear()} Alphaville Litoral Norte 4. Todos os direitos reservados. As imagens são meramente ilustrativas.
+            Imagens ilustrativas. Condições sujeitas a alteração e disponibilidade.
+          </p>
+          <p>
+            © {new Date().getFullYear()} Alphaville Litoral Norte 4. Todos os direitos reservados. <a href="/politica-de-privacidade" className="underline hover:text-white">Política de Privacidade</a>.
           </p>
         </div>
       </div>

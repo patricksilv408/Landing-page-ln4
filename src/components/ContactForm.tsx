@@ -35,6 +35,9 @@ export const ContactForm = memo(() => {
           <Button type="submit" size="lg" className="w-full bg-alphaville-green hover:bg-alphaville-green/90 text-charcoal font-semibold rounded-lg text-base">
             Quero receber agora
           </Button>
+          <p className="text-xs text-center text-muted-foreground pt-2">
+            Ao prosseguir, você concorda com a nossa <a href="/politica-de-privacidade" target="_blank" rel="noopener noreferrer" className="underline hover:text-charcoal">Política de Privacidade</a>.
+          </p>
         </form>
       </div>
     </section>
