@@ -2,7 +2,11 @@ import { Square, Trees, ShieldCheck, PenTool, Building } from "lucide-react";
 import { memo } from "react";
 
 const features = [
-  { icon: Square, text: "Lotes a partir de 360 m²" },
+  { 
+    icon: Square, 
+    text: "Lotes a partir de 360 m²", 
+    subtext: "Pagamento facilitado direto com o Alphaville" 
+  },
   { icon: Trees, text: "Áreas verdes extensas" },
   { icon: ShieldCheck, text: "Segurança 24h" },
   { icon: PenTool, text: "Projeto e paisagismo assinados" },
@@ -22,6 +26,9 @@ export const About = memo(() => {
               <div key={index} className="flex flex-col items-center text-center">
                 <feature.icon className="w-8 h-8 text-subtle-gold mb-3" />
                 <span className="text-sm font-medium">{feature.text}</span>
+                {feature.subtext && (
+                  <span className="text-xs text-charcoal/70 mt-1">{feature.subtext}</span>
+                )}
               </div>
             ))}
           </div>
