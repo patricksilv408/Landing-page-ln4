@@ -8,11 +8,11 @@ export const Footer = memo(() => {
         <img 
           src="/images/logo-derlon-alves.png" 
           alt="Derlon Alves Logo" 
-          className="h-20 w-auto mx-auto mb-6 rounded-lg" 
+          className="h-28 w-auto mx-auto mb-6 rounded-lg" 
           loading="lazy" 
           decoding="async"
-          width="160"
-          height="160"
+          width="112"
+          height="112"
         />
         <div className="mb-4">
           <p className="font-semibold text-off-white">Derlon Alves — CRECI 25.820</p>
