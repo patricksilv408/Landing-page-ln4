@@ -10,6 +10,16 @@ declare global {
   }
 }
 
+// Helper function to read a specific cookie by name
+const getCookie = (name: string): string | undefined => {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) {
+    return parts.pop()?.split(';').shift();
+  }
+  return undefined;
+};
+
 export const useButtonTracker = () => {
   useEffect(() => {
     const handleClick = (event: MouseEvent) => {
@@ -22,12 +32,21 @@ export const useButtonTracker = () => {
         const isTracked = TRACKING_KEYWORDS.some(keyword => href.includes(keyword));
 
         if (isTracked) {
+          // Capture Meta cookies and user agent
+          const fbp = getCookie('_fbp');
+          const fbc = getCookie('_fbc');
+          const userAgent = navigator.userAgent;
+
           const payload = {
             button_type: href.includes('wa.me') || href.includes('whatsapp') ? 'whatsapp' : 'contact_lead',
             button_text: anchor.innerText?.trim() || 'No text found',
             button_link: anchor.href,
             timestamp: new Date().toISOString(),
             page_url: window.location.href,
+            // Add new data for Meta Conversions API
+            fbp: fbp,
+            fbc: fbc,
+            user_agent: userAgent,
           };
 
           // 1. Send data to the webhook
