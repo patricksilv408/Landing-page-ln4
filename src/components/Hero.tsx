@@ -31,6 +31,13 @@ export const Hero = memo(() => {
         <p className="text-lg md:text-xl font-sans max-w-3xl mb-8">
           Lotes amplos em um projeto exclusivo, com lazer completo, segurança e localização estratégica.
         </p>
+        
+        <div className="bg-black/30 backdrop-blur-sm border border-subtle-gold/50 rounded-lg px-6 py-3 mb-8">
+          <p className="text-xl md:text-2xl font-semibold text-off-white">
+            Lotes a partir de <span className="text-alphaville-green">R$ 367.944,25</span>
+          </p>
+        </div>
+
         <div className="flex flex-col sm:flex-row gap-4">
           <Button asChild size="lg" className="bg-alphaville-green hover:bg-alphaville-green/90 text-charcoal font-semibold rounded-lg px-8 py-6 text-base">
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
