@@ -5,5 +5,4 @@ export const NAV_LINKS = [
   { href: "#lazer", label: "Lazer" },
   { href: "#localizacao", label: "Localização" },
   { href: "#diferenciais", label: "Diferenciais" },
-  { href: "#contato", label: "Contato" },
 ];

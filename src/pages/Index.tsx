@@ -7,7 +7,6 @@ import { StickyCTA } from "@/components/StickyCTA";
 const About = lazy(() => import("@/components/About").then(module => ({ default: module.About })));
 const Leisure = lazy(() => import("@/components/Leisure").then(module => ({ default: module.Leisure })));
 const Location = lazy(() => import("@/components/Location").then(module => ({ default: module.Location })));
-const ContactForm = lazy(() => import("@/components/ContactForm").then(module => ({ default: module.ContactForm })));
 const Footer = lazy(() => import("@/components/Footer").then(module => ({ default: module.Footer })));
 
 const Index = () => {
@@ -20,7 +19,6 @@ const Index = () => {
           <About />
           <Leisure />
           <Location />
-          <ContactForm />
         </Suspense>
       </main>
       <Suspense fallback={null}>

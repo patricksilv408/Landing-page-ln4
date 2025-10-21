@@ -37,11 +37,6 @@ export const Hero = memo(() => {
               Quero falar agora
             </a>
           </Button>
-          <Button asChild variant="outline" size="lg" className="border-off-white text-off-white hover:bg-off-white hover:text-charcoal rounded-lg px-8 py-6 text-base">
-            <a href="#contato">
-              Receber condições de lançamento
-            </a>
-          </Button>
         </div>
         <p className="text-xs text-white/80 mt-4 max-w-md text-center">
           Ao prosseguir, autorizo contato por WhatsApp, telefone e e-mail sobre o Alphaville Litoral Norte 4. Consulte a nossa <a href="/politica-de-privacidade" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Política de Privacidade</a>.
